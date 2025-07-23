@@ -1,0 +1,992 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet lv1,2</name>
+    <events>
+        <variable constant="0" name="skor" sid="660819865895827" static="0" type="number">0</variable>
+        <event-group description="" sid="839489730027244" title="control player">
+            <sub-events>
+                <event-block sid="541418328022169">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="990808551391909" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="926884997250662" type="Spriteplayer">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="167866066715596" type="Spriteplayer">
+                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="526628047281027" type="Spriteplayer">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="6" name="Set speed" sid="512270416769531" type="Spriteplayer">
+                            <param id="0" name="Speed">10</param>
+                        </action>
+                        <action id="-49" name="Set minimum framerate" sid="238078464391801" type="System">
+                            <param id="0" name="Minimum FPS">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="171157948450491">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="160353848639942" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="127570811056553" type="Spriteplayer">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="572328993889749" type="Spriteplayer">
+                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="981021855631738" type="Spriteplayer">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="6" name="Set speed" sid="295359545743953" type="Spriteplayer">
+                            <param id="0" name="Speed">10</param>
+                        </action>
+                        <action id="-49" name="Set minimum framerate" sid="307367527923981" type="System">
+                            <param id="0" name="Minimum FPS">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="369531613249361">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="687346511579032" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="456890068387939" type="Spriteplayer">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="132574938889087" type="Spriteplayer">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="748804003965588" type="Spriteplayer">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="6" name="Set speed" sid="514438784547735" type="Spriteplayer">
+                            <param id="0" name="Speed">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="294930184319732">
+                    <conditions>
+                        <condition id="7" name="On any key released" sid="553967378087467" type="Keyboard" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="989103356260960" type="Spriteplayer">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="281382319654170">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="885200957655108" type="Spriteplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="142135784710985" type="Spriteplayer">
+                            <param id="0" name="Animation">&quot;fall&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="519580511223178">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="853963247108573" type="Spriteplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="737531830986222" type="Spriteplayer">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="137386651245885">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="529897320508405" type="Keyboard">
+                            <param id="0" name="Key">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="944075206598972" type="Spriteplayer">
+                            <param id="0" name="Animation">&quot;attack&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="274605482335324">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="193693849620579" type="System">
+                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                </condition>
+                                <condition id="1" name="Preloads complete" sid="689393740002965" type="Audio" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="213997639543831" type="Spriteplayer">
+                                    <param id="0" name="Object">slash</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="28" name="Play at object (by name)" sid="711227592642201" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">&quot;10_human_special_atk_2&quot;</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="4" name="Object">slash</param>
+                                    <param id="5" name="Inner angle">360</param>
+                                    <param id="6" name="Outer angle">360</param>
+                                    <param id="7" name="Outer gain">0</param>
+                                    <param id="8" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="703586563140650">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="309938018762453" type="Spriteplayer" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="520407924557292" type="slash">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="443798732349947" title="musuh">
+            <sub-events>
+                <event-block sid="714519698583472">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="889569842321446" type="enemymushroom">
+                            <param id="0" name="Instance variable">enemymove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;kiri&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="669494394981056" type="enemymushroom">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="840935128371330" type="enemymushroom">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="855925421728075" type="enemymushroom">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="817379350428597">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="346481241558198" type="enemymushroom">
+                            <param id="0" name="Instance variable">enemymove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;kanan&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="347632098107430" type="enemymushroom">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="213786508232687" type="enemymushroom">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="149953736253218" type="enemymushroom">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="933783137252951">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="739310882874232" type="enemymushroom">
+                            <param id="0" name="Object">Tilemap2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="867785203320716">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="508276914337478" type="enemymushroom">
+                                    <param id="0" name="Instance variable">enemymove</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;kiri&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="876542992810654" type="enemymushroom">
+                                    <param id="0" name="Instance variable">enemymove</param>
+                                    <param id="1" name="Value">&quot;kanan&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="301635589195875">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="727842634208780" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="350999625468176" type="enemymushroom">
+                                    <param id="0" name="Instance variable">enemymove</param>
+                                    <param id="1" name="Value">&quot;kiri&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="371492793336967">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="295717607490583" type="enemymushroom">
+                            <param id="0" name="Object">Tilemap6</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="127354620026706">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="826093416431783" type="enemymushroom">
+                                    <param id="0" name="Instance variable">enemymove</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;kiri&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="681321547393221" type="enemymushroom">
+                                    <param id="0" name="Instance variable">enemymove</param>
+                                    <param id="1" name="Value">&quot;kanan&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="483849893505902">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="264263406960226" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="565306527302189" type="enemymushroom">
+                                    <param id="0" name="Instance variable">enemymove</param>
+                                    <param id="1" name="Value">&quot;kiri&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="130051559037936">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="174416016103012" type="slash">
+                            <param id="0" name="Object">Tilemap2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="624189771069605">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="657292478281508" type="System">
+                                    <param id="0" name="Interval (seconds)">0.3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="28" name="Play at object (by name)" sid="524223280494321" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">&quot;27_sword_miss_1&quot;</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="4" name="Object">slash</param>
+                                    <param id="5" name="Inner angle">360</param>
+                                    <param id="6" name="Outer angle">360</param>
+                                    <param id="7" name="Outer gain">0</param>
+                                    <param id="8" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="783193517560352" type="slash" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="318506054667344">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="851135540422718" type="enemymushroom">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="527118854073344" type="enemymushroom" />
+                    </actions>
+                </event-block>
+                <event-block sid="818776697055592">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="801102310109209" type="slash">
+                            <param id="0" name="Object">enemymushroom</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="168985486401802" type="enemymushroom">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="137516980590741">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="893618047063169" type="System">
+                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="326133876040910" type="enemymushroom">
+                                    <param id="0" name="Animation">&quot;damaged&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="28" name="Play at object (by name)" sid="142090445306285" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">&quot;26_sword_hit_3&quot;</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="4" name="Object">enemymushroom</param>
+                                    <param id="5" name="Inner angle">360</param>
+                                    <param id="6" name="Outer angle">360</param>
+                                    <param id="7" name="Outer gain">0</param>
+                                    <param id="8" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="866080179933571" type="slash" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="460743610667924">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="802870451677571" type="System">
+                            <param id="0" name="Object">enemymushroom</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="161791667164557">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="542513837428683" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="789242300720395" type="System">
+                                    <param id="0" name="Object to create">Sprite5</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="X">enemymushroom.X</param>
+                                    <param id="3" name="Y">enemymushroom.Y</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="717064044825592" type="System">
+                                    <param id="0" name="Object to create">Sprite4</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="X">enemymushroom.X</param>
+                                    <param id="3" name="Y">enemymushroom.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="274946958248699">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="815604800921496" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="809000868105052" type="Sprite5">
+                            <param id="0" name="X">enemymushroom.X -10</param>
+                            <param id="1" name="Y">enemymushroom.Y  -15</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="194530367342433" type="Sprite5">
+                            <param id="0" name="Width">enemymushroom.health</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="537851925426306" type="Sprite4">
+                            <param id="0" name="X">enemymushroom.X</param>
+                            <param id="1" name="Y">enemymushroom.Y -15</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="247594313155105" title="koin">
+            <sub-events>
+                <event-block sid="689892766906345">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="320424246913145" type="Spriteplayer">
+                            <param id="0" name="Object">diamon</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="705313082622081" type="diamon" />
+                        <action id="-10" name="Add to" sid="749294480163734" type="System">
+                            <param id="0" name="Variable">skor</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="708290994218698" type="skor">
+                            <param id="0" name="Text">&quot;&quot;&amp;skor</param>
+                        </action>
+                        <action id="25" name="Play at object" sid="591749674468780" type="Audio">
+                            <param id="0" name="Audio file">Collect Gem</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">-4</param>
+                            <param id="3" name="Object">diamon</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="163565672630622" title="nyawa">
+            <sub-events>
+                <event-block sid="449173219441422">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="359357571207561" type="Spriteplayer">
+                            <param id="0" name="Object">enemymushroom</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="171400771338357" type="enemymushroom">
+                            <param id="0" name="Animation">&quot;attack&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="314593387956378" type="Spriteplayer">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">20</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="468913792807451" type="Spriteplayer">
+                            <param id="0" name="Animation">&quot;hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="452806131489302" type="Spriteplayer">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="985219924312309" type="Audio">
+                            <param id="0" name="Audio file">EnemyHit</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-4</param>
+                            <param id="1" name="Tag (optional)">&quot;musuhhit&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="712052619353394">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="533471260775107" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="891687737113800" type="darah">
+                            <param id="0" name="Width">Spriteplayer.health</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="138934018006424" title="game over">
+            <sub-events>
+                <event-block sid="212021465959340">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="781530924916963" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="401033069837827" type="System">
+                            <param id="0" name="Layer">&quot;gameover&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="880542110180614">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="328700386276949" type="Spriteplayer">
+                            <param id="0" name="Object">jurang</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="333892908656932" type="Spriteplayer">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="351800867548064" type="Spriteplayer" />
+                        <action behavior="Platform" id="11" name="Set enabled" sid="223561911130854" type="Spriteplayer">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="605402272864773" type="System">
+                            <param id="0" name="Layer">&quot;gameover&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="702700665177071" type="Audio">
+                            <param id="0" name="Audio file">Jingle Lose</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="845832790518126">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="829542489152420" type="Spriteplayer">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="270221006534740" type="System">
+                            <param id="0" name="Layer">&quot;gameover&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="401069202047092" type="Spriteplayer" />
+                        <action behavior="Platform" id="11" name="Set enabled" sid="339298482573140" type="Spriteplayer">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="884477945531699" type="Audio">
+                            <param id="0" name="Audio file">Jingle Lose</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="856422905895388">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="950829422398919" type="Touch">
+                            <param id="0" name="Object">home</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="834539997042652" type="System">
+                            <param id="0" name="Layer">&quot;gameover&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="627720605937247" type="System">
+                            <param id="0" name="Variable">skor</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="194913343456075" type="System">
+                            <param id="0" name="Layout">home</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="714512680347414">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="248635357691196" type="Touch">
+                            <param id="0" name="Object">ulang</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="509062990046308" type="System">
+                            <param id="0" name="Layer">&quot;gameover&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="232831642068589" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="440988623647020" title="finish">
+            <sub-events>
+                <event-block sid="550723428636998">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="193368244121684" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="816732816406374" type="System">
+                            <param id="0" name="Layer">&quot;finish&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="574107512917112">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="371711075662128" type="Spriteplayer">
+                            <param id="0" name="Object">Sprite3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="652411017503204" type="System">
+                            <param id="0" name="Layer">&quot;finish&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="584982529961668" type="Spriteplayer">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="919737777638533">
+                            <conditions>
+                                <condition id="-7" name="Compare time" sid="580993072668338" type="System">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Time (seconds)">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="28" name="Play at object (by name)" sid="395074992115928" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">&quot;goodresult-82807&quot;</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="4" name="Object">Sprite3</param>
+                                    <param id="5" name="Inner angle">360</param>
+                                    <param id="6" name="Outer angle">0</param>
+                                    <param id="7" name="Outer gain">0</param>
+                                    <param id="8" name="Tag (optional)">&quot;win&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="111207817741963">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="390842917693223" type="Spriteplayer">
+                            <param id="0" name="Object">Sprite17</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="488914996458610" type="System">
+                            <param id="0" name="Layout">level 1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="890092314569509">
+                            <conditions>
+                                <condition id="-7" name="Compare time" sid="146562159362159" type="System">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Time (seconds)">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="28" name="Play at object (by name)" sid="799810886930094" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">&quot;goodresult-82807&quot;</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="4" name="Object">Sprite3</param>
+                                    <param id="5" name="Inner angle">360</param>
+                                    <param id="6" name="Outer angle">0</param>
+                                    <param id="7" name="Outer gain">0</param>
+                                    <param id="8" name="Tag (optional)">&quot;win&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="786445000839680">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="851813776511740" type="Touch">
+                            <param id="0" name="Object">home</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="131372889429620" type="System">
+                            <param id="0" name="Layer">&quot;finish&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="965795853886198" type="System">
+                            <param id="0" name="Layout">home</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="574252177993894" type="Spriteplayer">
+                            <param id="0" name="X">44</param>
+                            <param id="1" name="Y">70</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="467160700024307" type="Spriteplayer">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="480114446979366" type="System">
+                            <param id="0" name="Variable">skor</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="858424694078534" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="651951019489140">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="960931070662263" type="Touch">
+                            <param id="0" name="Object">ulang</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="735200807158648" type="System">
+                            <param id="0" name="Layer">&quot;finish&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="214571064859534" type="Spriteplayer">
+                            <param id="0" name="X">44</param>
+                            <param id="1" name="Y">70</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="611626904445134" type="Spriteplayer">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="954043687107398" type="System">
+                            <param id="0" name="Variable">skor</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="874011343071036" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="369367409008927">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="879079767939203" type="Touch">
+                            <param id="0" name="Object">lanjut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="113373231046898" type="System">
+                            <param id="0" name="Layout">level 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="712237585598517">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="911378151174696" type="Touch">
+                            <param id="0" name="Object">lanjut2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="872562155560723" type="System">
+                            <param id="0" name="Layout">level 3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="223479108036170">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="780514030285174" type="Touch">
+                            <param id="0" name="Object">lanjut3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="148532583228626" type="System">
+                            <param id="0" name="Layout">final boss</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="874846479099012" title="boss" />
+        <event-block sid="725416803544314">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="490340839945467" type="Sprite2">
+                    <param id="0" name="Instance variable">enemymove</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="889992966658379" type="Sprite2">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="530771248068793" type="Sprite2">
+                    <param id="0" name="Animation">&quot;run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="648096609112082" type="Sprite2">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="441934711679651">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="218534006716582" type="Sprite2">
+                    <param id="0" name="Instance variable">enemymove</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="642338228026487" type="Sprite2">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="742823851099492" type="Sprite2">
+                    <param id="0" name="Animation">&quot;run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="162545619925932" type="Sprite2">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="590859044808091">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="757347932861501" type="Sprite2">
+                    <param id="0" name="Object">Spriteplayer</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="224457419855247">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="235806571695047" type="Spriteplayer">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Sprite2.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="944986173950914" type="Sprite2">
+                            <param id="0" name="Instance variable">enemymove</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="773243961624429">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="442938247711755" type="Spriteplayer">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Sprite2.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="474539921835039" type="Sprite2">
+                            <param id="0" name="Instance variable">enemymove</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="447040960580674">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="127875527489428" type="slash">
+                    <param id="0" name="Object">Sprite2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="746736864976664" type="Sprite2">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="4" name="Set animation" sid="849391683213974" type="Sprite2">
+                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="115478608037219">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="141020941720694" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="28" name="Play at object (by name)" sid="847955628532387" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;26_sword_hit_3&quot;</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="4" name="Object">Sprite2</param>
+                            <param id="5" name="Inner angle">360</param>
+                            <param id="6" name="Outer angle">360</param>
+                            <param id="7" name="Outer gain">0</param>
+                            <param id="8" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="926314695649282" type="slash" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="247871711730706">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="802707914109130" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="509956680363837" type="Sprite16">
+                    <param id="0" name="Width">Sprite2.health</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="597744542310712">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="558859909417801" type="Sprite2">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="360021365549476" type="Sprite2" />
+            </actions>
+            <sub-events>
+                <event-block sid="601308412012608">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="805503606397177" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="967530914677557" type="spawn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="158232355947760">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="969097731451940" type="Sprite2">
+                    <param id="0" name="Object">Spriteplayer</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="338957742539734" type="Spriteplayer">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="4" name="Set animation" sid="605170308071000" type="Sprite2">
+                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="984776480534350" type="Spriteplayer">
+                    <param id="0" name="Animation">&quot;hit&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="594298108127366" type="Spriteplayer">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+                <action id="0" name="Play" sid="743310529879121" type="Audio">
+                    <param id="0" name="Audio file">EnemyHit</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-4</param>
+                    <param id="1" name="Tag (optional)">&quot;musuhhit&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="184086912349785">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="998474542475847" type="slash">
+                    <param id="0" name="Object">Tilemap</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="352776761181161">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="604544049823575" type="System">
+                            <param id="0" name="Interval (seconds)">0.3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="28" name="Play at object (by name)" sid="769318244170036" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;27_sword_miss_1&quot;</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="4" name="Object">slash</param>
+                            <param id="5" name="Inner angle">360</param>
+                            <param id="6" name="Outer angle">360</param>
+                            <param id="7" name="Outer gain">0</param>
+                            <param id="8" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="362839435267677" type="slash" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

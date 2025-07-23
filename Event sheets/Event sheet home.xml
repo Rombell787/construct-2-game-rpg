@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet home</name>
+    <events>
+        <event-group description="" sid="166146380754320" title="tampilan">
+            <sub-events>
+                <event-block sid="264074472159272">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="375188713268517" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="220002635143193" type="play">
+                            <param id="0" name="Animation">&quot;play&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="614148911389999" type="Audio">
+                            <param id="0" name="Audio file">backsound</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;backsound&quot;</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="417788512318019" type="System">
+                            <param id="0" name="Layer">&quot;setting&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="308049673552550">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="292879292624392" type="Touch">
+                            <param id="0" name="Object">play</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="139043818913291" type="System">
+                            <param id="0" name="Layout">level 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="980899703332754">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="424788465337334" type="Touch">
+                            <param id="0" name="Object">silang</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Close" sid="597632849502493" type="Browser" />
+                    </actions>
+                </event-block>
+                <event-block sid="496081228574144">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="581284177238152" type="Touch">
+                            <param id="0" name="Object">pengaturan</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="578485814314104" type="System">
+                            <param id="0" name="Layer">&quot;setting&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="491529493375923" title="setting">
+            <sub-events>
+                <event-block sid="353323516738044">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="167650786000394" type="Touch">
+                            <param id="0" name="Object">kembali</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="248449875970126" type="System">
+                            <param id="0" name="Layer">&quot;setting&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="742609130479354">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="923260831951179" type="Touch">
+                            <param id="0" name="Object">musik</param>
+                        </condition>
+                        <condition id="5" inverted="1" name="Is tag playing" sid="804771696551986" type="Audio">
+                            <param id="0" name="Tag">&quot;backsound&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="385365163347967" type="Audio">
+                            <param id="0" name="Audio file">backsound</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-8</param>
+                            <param id="1" name="Tag (optional)">&quot;backsound&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="167439452463176">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="875113348222835" type="Touch">
+                            <param id="0" name="Object">ulangi</param>
+                        </condition>
+                        <condition id="5" inverted="1" name="Is tag playing" sid="222312816088669" type="Audio">
+                            <param id="0" name="Tag">&quot;backsound&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="22" name="Set paused" sid="447869241698146" type="Audio">
+                            <param id="0" name="Tag">&quot;backsound&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="637879461319289" type="Audio">
+                            <param id="0" name="Audio file">backsound</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-4</param>
+                            <param id="1" name="Tag (optional)">&quot;backsound&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="712355380791272">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="793571253773046" type="Touch">
+                            <param id="0" name="Object">pause</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="22" name="Set paused" sid="688017266768738" type="Audio">
+                            <param id="0" name="Tag">&quot;backsound&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
